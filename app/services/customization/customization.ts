@@ -22,6 +22,7 @@ import { UsageStatisticsService } from 'services/usage-statistics';
 // Maps to --background
 const THEME_BACKGROUNDS = {
   'night-theme': { r: 23, g: 36, b: 45 },
+  'midnight-theme': { r: 29, g: 35, b: 47 },
   'prime-dark': { r: 17, g: 17, b: 17 },
   'day-theme': { r: 245, g: 248, b: 250 },
   'prime-light': { r: 243, g: 243, b: 243 },
@@ -30,6 +31,7 @@ const THEME_BACKGROUNDS = {
 // Maps to --section
 const SECTION_BACKGROUNDS = {
   'night-theme': { r: 11, g: 22, b: 29 },
+  'midnight-theme': { r: 20, g: 24, b: 32 },
   'prime-dark': { r: 0, g: 0, b: 0 },
   'day-theme': { r: 227, g: 232, b: 235 },
   'prime-light': { r: 255, g: 255, b: 255 },
@@ -38,6 +40,7 @@ const SECTION_BACKGROUNDS = {
 // Doesn't map 1:1
 const DISPLAY_BACKGROUNDS = {
   'night-theme': { r: 11, g: 22, b: 29 },
+  'midnight-theme': { r: 20, g: 24, b: 32 },
   'prime-dark': { r: 37, g: 37, b: 37 },
   'day-theme': { r: 227, g: 232, b: 235 },
   'prime-light': { r: 255, g: 255, b: 255 },
@@ -139,7 +142,7 @@ export class CustomizationService extends PersistentStatefulService<ICustomizati
   }
 
   get isDarkTheme() {
-    return ['night-theme', 'prime-dark'].includes(this.currentTheme);
+    return ['night-theme', 'midnight-theme', 'prime-dark'].includes(this.currentTheme);
   }
 
   setUpdateStreamInfoOnLive(update: boolean) {
@@ -173,6 +176,7 @@ export class CustomizationService extends PersistentStatefulService<ICustomizati
   get themeOptions() {
     const options = [
       { value: 'night-theme', title: $t('Night') },
+      { value: 'midnight-theme', title: $t('Midnight') },
       { value: 'day-theme', title: $t('Day') },
     ];
 
