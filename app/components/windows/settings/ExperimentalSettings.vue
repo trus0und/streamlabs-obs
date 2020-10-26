@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="section">
-      <div class="section-content">
+      <div class="section-content" style="margin-bottom: -20px;">
         <GenericForm v-model="settingsFormData" @input="saveSettings" />
         <button class="button button--action" @click="repairSceneCollection()">
           Repair Scene Collection

@@ -60,7 +60,7 @@ export default class AppearanceSettings extends Vue {
         title: $t('FrankerFaceZ Settings'),
         queryParams: {},
         size: {
-          width: 800,
+          width: 1450,
           height: 800,
         },
       },

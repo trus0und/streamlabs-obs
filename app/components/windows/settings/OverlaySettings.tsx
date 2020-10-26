@@ -115,7 +115,7 @@ export default class OverlaySettings extends Vue {
           {this.button($t('Import Widget File in Current Scene'), () => this.loadWidget())}
         </div>
         <div class="section">
-          <div class="section-content">
+          <div class="section-content" style="width: 120%;">
             <BoolInput
               vModel={this.mediaBackupOptOut}
               title={$t('Do not back up my media files in the cloud (requires app restart)')}

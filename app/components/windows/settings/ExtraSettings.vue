@@ -19,7 +19,7 @@
             <i class="icon-trash" /><span>{{ $t('Delete Cache and Restart') }}</span>
           </a>
         </div>
-        <div class="input-container">
+        <div class="input-container" style="margin-bottom: 8px;">
           <a class="link" @click="uploadCacheDir" :disabled="cacheUploading">
             <i class="fa fa-upload" /> <span>{{ $t('Upload Cache to Developers') }}</span>
             <i class="fa fa-spinner fa-spin" v-if="cacheUploading" />
@@ -39,7 +39,7 @@
           :metadata="{ title: $t('Disable hardware acceleration (requires restart)'), name: 'disable_ha'  }"
         />
         <div class="actions">
-          <div class="input-container">
+          <div class="input-container" style="margin-top: 8px; margin-bottom: 8px;">
             <button class="button button--default" @click="restartStreamlabelsSession">
               {{ $t('Restart Stream Labels') }}
             </button>
@@ -50,17 +50,17 @@
     <div class="section">
       <div class="section-content">
         <div class="actions">
-          <div class="input-container">
+          <div class="input-container" style="margin-bottom: 8px;">
             <button class="button button--default" @click="configureDefaults">
               {{ $t('Configure Default Devices') }}
             </button>
           </div>
-          <div class="input-container" v-if="isTwitch && !isRecordingOrStreaming && protectedMode">
+          <div class="input-container" style="margin-bottom: 8px;" v-if="isTwitch && !isRecordingOrStreaming && protectedMode">
             <button class="button button--default" @click="runAutoOptimizer">
               {{ $t('Auto Optimize') }}
             </button>
           </div>
-          <div class="input-container">
+          <div class="input-container" style="margin-bottom: 8px;">
             <button class="button button--default" @click="importFromObs">
               {{ $t('OBS Import') }}
             </button>
@@ -79,7 +79,7 @@
 .actions {
   .flex();
   .flex--space-between();
-  .margin-top();
+  //.margin-top();
 
   flex-wrap: wrap;
 }

@@ -1,9 +1,7 @@
 <template>
   <div class="row alignable-input">
     <div class="input-label">
-      <label>
-        {{ options.title }}
-      </label>
+      <label>{{ options.title }}</label>
     </div>
     <div class="input-body">
       <div class="input-container input-container--no-margin">
