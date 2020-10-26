@@ -238,7 +238,7 @@ export default class StreamSettings extends TsxComponent {
           {isMerged ? username : <span style={{ opacity: '0.5' }}>{$t('unlinked')}</span>} <br />
         </div>
 
-        <div style={{ marginLeft: 'auto' }}>
+        <div style={{ marginLeft: 'auto', marginTop: '4px' }}>
           {shouldShowConnectBtn && (
             <span>
               {shouldShowPrimeLabel && <b class={styles.prime}>prime</b>}
