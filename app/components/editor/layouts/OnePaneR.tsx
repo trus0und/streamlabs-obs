@@ -27,15 +27,15 @@ export default class OnePaneR extends BaseLayout {
       <div class={cx(styles.columns, styles.sidePadded)}>
         <div
           class={styles.rows}
-          style={{ width: `${100 - this.resizes.bar1 * 100}%`, paddingTop: '16px' }}
+          style={{ width: `${100 - this.resizes.bar1 * 100}%`, paddingTop: '0px' }}
         >
-          <div class={styles.cell} style={{ height: '100%' }}>
+          <div class={styles.cell} style={{ height: '150%' }}>
             {this.$slots['1']}
           </div>
           <div class={styles.segmented}>
-            <div class={styles.cell}>{this.$slots['3']}</div>
-            <div class={styles.cell}>{this.$slots['4']}</div>
-            <div class={styles.cell}>{this.$slots['5']}</div>
+            <div class={styles.cell} style="padding-top: 0px;">{this.$slots['3']}</div>
+            <div class={styles.cell} style="padding-top: 0px;">{this.$slots['4']}</div>
+            <div class={styles.cell} style="padding-top: 0px;">{this.$slots['5']}</div>
           </div>
         </div>
         <ResizeBar
