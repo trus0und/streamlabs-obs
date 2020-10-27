@@ -96,6 +96,7 @@
   display: flex;
   align-items: center;
   width: 50%;
+  margin-top: 2px; // added to fix draw jank 
 }
 
 .input-wrapper--search {
